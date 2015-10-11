@@ -83,52 +83,24 @@ public class TestMain extends TestCase{
 		super.tearDown();
 	}
 	
-	//Dena ondo egiten duena
-	@Test
 	public void testTuristaErregistratu1() throws InterruptedException, RemoteException{
 		ApplicationFacadeInterface facade=MainWindow.getBusinessLogic();
-		erab.setIzena("Proba");
+		erab.setIzena("Aniceto");
 		assertEquals(1111,erab.probatuIzena());
 		Thread.sleep(1000);
-		erab.setAbizenak("Bat");
+		erab.setAbizenak("Pino");
 		assertEquals(2222,erab.probatuAbizena());
 		Thread.sleep(1000);
-		erab.setErabiltzailea("Lehena1");
+		erab.setErabiltzailea("proba4");
 		assertEquals(6666,erab.probatuErabiltzailea());
 		Thread.sleep(1000);
-		erab.setPasahitza("Pass001");
+		erab.setPasahitza("pasahitza1");
 		assertEquals(4444,erab.probatuPasahitza());
 		Thread.sleep(1000);
-		erab.setKontuKorrontea("1234567891234567");
+		erab.setKontuKorrontea("0000231456203147");
 		assertEquals(5555,erab.probatuKontuKorrontea());
 		Thread.sleep(1000);
-		erab.setPostaElektronikoa("p01@email.com");
-		assertEquals(3333,erab.probatuEmaila());
-		Thread.sleep(1000);
-		facade.storeTuristaErregistratua(this.erab);
-		facade.close();
-	}
-	
-	//Pasahitza letrik gabe
-	@Test
-	public void testTuristaErregistratu2() throws InterruptedException, RemoteException{
-		ApplicationFacadeInterface facade=MainWindow.getBusinessLogic();
-		erab.setIzena("Proba");
-		assertEquals(1111,erab.probatuIzena());
-		Thread.sleep(1000);
-		erab.setAbizenak("Bi");
-		assertEquals(2222,erab.probatuAbizena());
-		Thread.sleep(1000);
-		erab.setErabiltzailea("P02");
-		assertEquals(6666,erab.probatuErabiltzailea());
-		Thread.sleep(1000);
-		erab.setPasahitza("123456");
-		assertEquals(4444,erab.probatuPasahitza());
-		Thread.sleep(1000);
-		erab.setKontuKorrontea("1234567891234567");
-		assertEquals(5555,erab.probatuKontuKorrontea());
-		Thread.sleep(1000);
-		erab.setPostaElektronikoa("p02@email.com");
+		erab.setPostaElektronikoa("email@zerb.com");
 		assertEquals(3333,erab.probatuEmaila());
 		Thread.sleep(1000);
 		facade.storeTuristaErregistratua(this.erab);
