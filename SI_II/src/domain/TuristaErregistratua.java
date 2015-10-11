@@ -128,7 +128,7 @@ public class TuristaErregistratua extends Erregistratua{
 	}
 	
 	public int probatuPasahitza(){
-		if(Pattern.matches("[0-9]*[A-Za-z!_.]{1,}[0-9]*", this.pasahitza)){
+		if(Pattern.matches("[0-9]*[A-Za-z!_.]{1,}[0-9]+", this.pasahitza)){
 			return 4444;
 		}
 		return 0;
@@ -147,4 +147,3 @@ public class TuristaErregistratua extends Erregistratua{
 		}
 		return 0;
 	}
-}
